@@ -1,0 +1,20 @@
+Criar workflow CI/CD (obrigatório)
+Adicionar arquivo: .github/workflows/main.yml com jobs:
+checkout
+setup Node (Node 22)
+npm ci
+npm run lint
+npm run build
+publicar no GitHub Pages (usando actions oficiais: actions/configure-pages + actions/upload-pages-artifact + actions/deploy-pages ou peaceiris/actions-gh-pages)
+Exemplo (resumo): check -> build -> deploy no job deploy acionado quando main recebe merge.
+Documentação no README.md
+Incluir:
+Link público do currículo no GitHub Pages (após deploy).
+Instruções detalhadas para executar via Docker (com os comandos do passo 1).
+Prints/evidência da Branch Protection — inclua o arquivo branch-protection.png e explique onde foi configurado.
+Breve instrução de como abrir PRs e padrão de commits.
+Verificação final e entrega
+Abrir PR da sua branch de feature para main.
+Aguardar CI rodar; somente merge quando o status estiver verde.
+Após merge, confirme que o site foi publicado no GitHub Pages e adicione o link final no README.md.
+No formulário do professor, submeta o link do repositório público.
