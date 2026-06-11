@@ -5,5 +5,5 @@ import { defineConfig } from 'astro/config';
 export default defineConfig({
     
     site: 'https://cissamil.github.io',
-    base: '/ds881-curriculo-GRR20245515',
+    base: '/ds881-curriculo-GRR20245515/',
 });

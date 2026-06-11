@@ -19,6 +19,7 @@ O site estará disponível em `http://localhost:8080`.
 A branch `main` está configurada para:
 1. Exigir Pull Request antes do merge.
 2. Exigir que os status checks (CI/CD) passem com sucesso.
+
 ![Proteção de Branch](./branch-protection.png)
 
 ##  Tecnologias
@@ -27,5 +28,4 @@ A branch `main` está configurada para:
 - GitHub Actions
 
 
-![Proteção de Branch](./branch-protection.png)
 
