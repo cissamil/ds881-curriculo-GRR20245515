@@ -26,3 +26,7 @@ A branch `main` está configurada para:
 - Astro
 - Docker
 - GitHub Actions
+
+
+![Proteção de Branch](./branch-protection.png)
+
