@@ -9,30 +9,49 @@ on:
 jobs:
   build-and-test:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: minor-meridian
     steps:
       - uses: actions/checkout@v4
-      
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 'lts/*'
+          cache: 'npm'
+          cache-dependency-path: minor-meridian/package.json
+
       - name: Install dependencies
-        run: cd minor-meridian && npm install
+        run: npm install
 
       - name: Lint check
-        run: cd minor-meridian && npm run astro check || echo "No lint script found"
+        run: npm run astro check || echo "No lint script found"
 
       - name: Build project
-        run: cd minor-meridian && npm run build
+        run: npm run build
 
   deploy:
     needs: build-and-test
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: minor-meridian
     permissions:
       contents: write
     steps:
       - uses: actions/checkout@v4
       
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 'lts/*'
+          cache: 'npm'
+          cache-dependency-path: minor-meridian/package.json
+
       - name: Install and Build
         run: |
-          cd minor-meridian
           npm install
           npm run build
 
