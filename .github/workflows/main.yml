@@ -20,7 +20,7 @@ jobs:
         with:
           node-version: 'lts/*'
           cache: 'npm'
-          cache-dependency-path: minor-meridian/package.json
+          cache-dependency-path: minor-meridian/package-lock.json
 
       - name: Install dependencies
         run: npm install
@@ -48,7 +48,7 @@ jobs:
         with:
           node-version: 'lts/*'
           cache: 'npm'
-          cache-dependency-path: minor-meridian/package.json
+          cache-dependency-path: minor-meridian/package-lock.json
 
       - name: Install and Build
         run: |
