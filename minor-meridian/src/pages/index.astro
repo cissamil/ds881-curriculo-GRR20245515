@@ -1,0 +1,534 @@
+---
+const profile = {
+	name: "Clarissa Morita",
+	role: "Analista e Desenvolvedora de Sistemas",
+	city: "Curitiba (PR)",
+	github: "https://github.com/cissamil",
+	linkedin: "https://www.linkedin.com/in/clarissa-eri-morita-3ab688238/",
+	email: "clarissamorita1@gmail.com",
+	summary:
+		"Graduanda em Tecnologia em Análise e Desenvolvimento de Sistemas (TADS) na UFPR. Experiência como jovem aprendiz em TI, com atuação em suporte e colaboração em projetos acadêmicos. Interesses em Java, desenvolvimento web (React, Node.js), bancos de dados, BI e Inteligência Artificial. Buscando oportunidade de crescimento e aprendizado contínuo em equipes ágeis.",
+};
+
+// Education and experience (pulled from LinkedIn profile)
+profile.education = {
+	degree: "Graduação em Tecnologia em Análise e Desenvolvimento de Sistemas (TADS)",
+	school: "Universidade Federal do Paraná (UFPR)",
+};
+
+profile.experience = [
+	{
+		role: "Jovem Aprendiz - TI",
+		company: "APK Logística",
+		period: "—",
+		description:
+			"Atuação em suporte e atividades de TI, participação em rotinas operacionais e uso de ferramentas internas.",
+	},
+];
+
+const skills = [
+	"Java",
+	"HTML e CSS",
+	"JavaScript",
+	"React",
+	"Node.js",
+	"SQL e Bancos de Dados",
+	"Git e GitHub",
+	"Docker",
+	"CI/CD",
+	"Astro",
+];
+
+const highlights = [
+	{
+		title: "Experiência prática em TI",
+		description:
+			"Atuação como jovem aprendiz em TI, com colaboração em demandas reais e aprendizado em ambiente profissional.",
+	},
+	{
+		title: "Graduação em TADS na UFPR",
+		description:
+			"Base acadêmica sólida em algoritmos, engenharia de software, bancos de dados e práticas de desenvolvimento.",
+	},
+	{
+		title: "Evolução contínua",
+		description:
+			"Aprendizado contínuo em Java, React, IA e métodos ágeis para construir produtos úteis e confiáveis.",
+	},
+];
+
+const projects = [
+	{
+		name: "TrabalhoDAC",
+		description: "Projeto Java academico com foco em estrutura, logica e boas praticas.",
+		url: "https://github.com/cissamil/TrabalhoDAC",
+	},
+	{
+		name: "ProjetoAlura",
+		description: "Projetos da Imersao Dev com JavaScript e experimentacoes de interface.",
+		url: "https://github.com/cissamil/ProjetoAlura",
+	},
+	{
+		name: "Projeto-Crud",
+		description: "Aplicacao CRUD em C# para consolidar fundamentos de desenvolvimento.",
+		url: "https://github.com/cissamil/Projeto-Crud",
+	},
+	{
+		name: "WebServidor",
+		description: "Servidor web basico com Node.js para estudo de backend e protocolos.",
+		url: "https://github.com/cissamil/WebServidor",
+	},
+];
+
+const steps = [
+	"Mapear problema e objetivo da entrega",
+	"Construir solucao limpa e escalavel",
+	"Validar com build, testes e revisao",
+	"Publicar com documentacao clara",
+];
+---
+
+<html lang="pt-BR">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" href="/favicon.ico" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<meta
+			name="description"
+			content="Curriculo e portifolio profissional de Clarissa. Desenvolvimento web moderno, com foco em qualidade, design e entrega continua."
+		/>
+		<title> Clarissa | Currículo Profissional</title>
+	</head>
+	<body>
+		<div class="background-glow" aria-hidden="true"></div>
+		<main class="page">
+			<header class="hero">
+				<div class="hero-grid">
+					<div class="hero-photo">
+						<!-- Place your photo at minor-meridian/public/eu.jpg -->
+						<img src="/eu.jpg" alt="Foto de Clarissa" />
+					</div>
+					<div class="hero-info">
+						<p class="tag">Disponível para oportunidades júnior e estágio</p>
+						<h1>
+							{profile.name}
+							<span>{profile.role}</span>
+						</h1>
+						<p class="summary">{profile.summary}</p>
+						<div class="cta-group">
+							<a class="btn primary" href={profile.github} target="_blank" rel="noreferrer">Ver GitHub</a>
+							<a class="btn ghost" href={profile.linkedin} target="_blank" rel="noreferrer">LinkedIn</a>
+							<a class="btn ghost" href={`mailto:${profile.email}`}>Entrar em contato</a>
+						</div>
+					</div>
+				</div>
+			</header>
+
+			<section class="panel about" aria-label="Resumo profissional">
+				<div>
+					<h2>Resumo rápido</h2>
+					<p>
+						Atualmente desenvolvendo um currículo online com foco em boas práticas de engenharia,
+						interface atrativa e deploy em GitHub Pages. Procuro contribuir em times que valorizem
+						aprendizado contínuo e colaboração.
+					</p>
+					<h3>Formação</h3>
+					<p><strong>{profile.education.degree}</strong> — {profile.education.school}</p>
+				</div>
+				<ul>
+					<li>
+						<strong>Local:</strong>
+						<span>{profile.city}</span>
+					</li>
+					<li>
+						<strong>Perfil técnico:</strong>
+						<span>Java · React · Node.js · Bancos de Dados · BI · Metodologias Ágeis</span>
+					</li>
+					<li>
+						<strong>Experiência:</strong>
+						<span>{profile.experience[0].role} @ {profile.experience[0].company}</span>
+					</li>
+				</ul>
+			</section>
+
+			<section class="panel" aria-label="Competências">
+				<h2>Competências</h2>
+				<div class="skills">
+					{skills.map((skill) => <span class="chip">{skill}</span>)}
+				</div>
+			</section>
+
+			<section class="grid" aria-label="Destaques profissionais">
+				{highlights.map((item) => (
+					<article class="card">
+						<h3>{item.title}</h3>
+						<p>{item.description}</p>
+					</article>
+				))}
+			</section>
+
+			<section class="panel" aria-label="Projetos em destaque">
+				<h2>Projetos em destaque</h2>
+				<div class="project-grid">
+					{projects.map((project) => (
+						<article class="project-card">
+							<h3>{project.name}</h3>
+							<p>{project.description}</p>
+							<a href={project.url} target="_blank" rel="noreferrer">Ver repositório</a>
+						</article>
+					))}
+				</div>
+			</section>
+
+			<section class="panel roadmap" aria-label="Forma de trabalho">
+				<h2>Como eu trabalho</h2>
+				<ol>
+					{steps.map((step) => <li>{step}</li>)}
+				</ol>
+			</section>
+		</main>
+	</body>
+</html>
+
+<style>
+	@import url("https://fonts.googleapis.com/css2?family=Syne:wght@500;700;800&family=IBM+Plex+Sans:wght@400;500;600&display=swap");
+
+	:root {
+		--bg: #0d121e;
+		--bg-soft: #111a2b;
+		--panel: rgba(14, 24, 42, 0.82);
+		--line: rgba(146, 175, 222, 0.25);
+		--text: #ebf1ff;
+		--muted: #b7c6e6;
+		--accent: #00d4b3;
+		--accent-2: #ffc857;
+		--shadow: 0 24px 70px rgba(5, 10, 19, 0.45);
+	}
+
+	* {
+		box-sizing: border-box;
+	}
+
+	body {
+		margin: 0;
+		font-family: "IBM Plex Sans", sans-serif;
+		background:
+			radial-gradient(circle at 15% 12%, rgba(0, 212, 179, 0.2), transparent 42%),
+			radial-gradient(circle at 88% 15%, rgba(255, 200, 87, 0.26), transparent 35%),
+			linear-gradient(140deg, var(--bg), #111d34 45%, #101623 100%);
+		color: var(--text);
+		min-height: 100vh;
+	}
+
+	.background-glow {
+		position: fixed;
+		inset: 0;
+		pointer-events: none;
+		background-image:
+			linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+			linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+		background-size: 48px 48px;
+		opacity: 0.14;
+		mask-image: radial-gradient(circle at center, black 38%, transparent 90%);
+	}
+
+	.page {
+		max-width: 1060px;
+		margin: 0 auto;
+		padding: 4.4rem 1.25rem 4rem;
+		display: grid;
+		gap: 1.1rem;
+	}
+
+	.hero,
+	.panel,
+	.card {
+		border: 1px solid var(--line);
+		background: var(--panel);
+		backdrop-filter: blur(10px);
+		border-radius: 1.25rem;
+		box-shadow: var(--shadow);
+		animation: rise 0.78s ease both;
+	}
+
+	.hero {
+		padding: 2rem;
+	}
+
+	.hero-grid {
+		display: flex;
+		align-items: flex-start; /* avatar alinhado ao topo */
+		gap: 1.1rem;
+	}
+
+	.hero-photo img {
+		width: 124px;
+		height: 124px;
+		object-fit: cover;
+		border-radius: 50%;
+		border: 3px solid rgba(255,255,255,0.12);
+		box-shadow: 0 12px 34px rgba(2,8,20,0.6);
+	}
+
+	.hero-photo {
+		flex: 0 0 auto;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.tag {
+		display: inline-flex;
+		padding: 0.35rem 0.8rem;
+		border-radius: 999px;
+		font-weight: 600;
+		font-size: 0.8rem;
+		letter-spacing: 0.04em;
+		color: #082b26;
+		background: linear-gradient(90deg, var(--accent), #72f0d8);
+		margin: 0 0 1rem;
+	}
+
+	h1,
+	h2,
+	h3 {
+		font-family: "Syne", sans-serif;
+		margin: 0;
+	}
+
+	h1 {
+		font-size: clamp(2rem, 4.5vw, 3.4rem);
+		line-height: 1.03;
+		display: grid;
+		gap: 0.3rem;
+	}
+
+	h1 span {
+		color: var(--accent-2);
+		font-size: clamp(1rem, 2vw, 1.35rem);
+		letter-spacing: 0.03em;
+	}
+
+	.summary {
+		margin: 0.5rem 0 0;
+		max-width: 70ch;
+		font-size: 1.02rem;
+		color: var(--muted);
+		line-height: 1.72;
+	}
+
+	.cta-group {
+		display: flex;
+		gap: 0.7rem;
+		margin-top: 1.5rem;
+		flex-wrap: wrap;
+	}
+
+	.btn {
+		text-decoration: none;
+		font-weight: 700;
+		padding: 0.7rem 1rem;
+		border-radius: 0.8rem;
+		transition: transform 200ms ease, background-color 200ms ease;
+	}
+
+	.btn:hover {
+		transform: translateY(-2px);
+	}
+
+	.btn.primary {
+		background: linear-gradient(90deg, var(--accent), #4fe6ca);
+		color: #06231f;
+	}
+
+	.btn.ghost {
+		border: 1px solid rgba(255, 255, 255, 0.35);
+		color: var(--text);
+	}
+
+	.panel {
+		padding: 1.5rem;
+	}
+
+	.panel h2 {
+		font-size: clamp(1.35rem, 2vw, 1.7rem);
+		margin-bottom: 0.8rem;
+	}
+
+	.panel p {
+		color: var(--muted);
+		line-height: 1.68;
+		margin: 0;
+	}
+
+	.about h3 {
+		margin-top: 1rem;
+	}
+
+	.about {
+		display: grid;
+		grid-template-columns: 1.4fr 1fr;
+		gap: 1rem;
+	}
+
+	.about ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		display: grid;
+		gap: 0.75rem;
+	}
+
+	.about li {
+		display: grid;
+		gap: 0.2rem;
+		padding: 0.8rem;
+		border-radius: 0.8rem;
+		background: rgba(255, 255, 255, 0.03);
+		border: 1px solid rgba(255, 255, 255, 0.08);
+	}
+
+	.about strong {
+		font-size: 0.88rem;
+		color: #d2def8;
+	}
+
+	.about span {
+		font-size: 0.98rem;
+		color: #f3f7ff;
+	}
+
+	.skills {
+		display: flex;
+		gap: 0.65rem;
+		flex-wrap: wrap;
+	}
+
+	.chip {
+		padding: 0.48rem 0.75rem;
+		border-radius: 999px;
+		font-size: 0.84rem;
+		font-weight: 700;
+		background: linear-gradient(90deg, rgba(0, 212, 179, 0.19), rgba(255, 200, 87, 0.18));
+		border: 1px solid rgba(255, 255, 255, 0.12);
+	}
+
+	.grid {
+		display: grid;
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+		gap: 1rem;
+	}
+
+	.card {
+		padding: 1.2rem;
+	}
+
+	.card h3 {
+		font-size: 1.15rem;
+		margin-bottom: 0.45rem;
+	}
+
+	.card p {
+		margin: 0;
+		line-height: 1.62;
+		color: var(--muted);
+	}
+
+	.project-grid {
+		display: grid;
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		gap: 0.85rem;
+	}
+
+	.project-card {
+		padding: 1rem;
+		border-radius: 0.9rem;
+		background: rgba(255, 255, 255, 0.03);
+		border: 1px solid rgba(255, 255, 255, 0.1);
+		display: grid;
+		gap: 0.5rem;
+	}
+
+	.project-card h3 {
+		font-size: 1.08rem;
+	}
+
+	.project-card p {
+		margin: 0;
+		color: var(--muted);
+		line-height: 1.55;
+	}
+
+	.project-card a {
+		text-decoration: none;
+		color: #97ffe9;
+		font-weight: 700;
+		font-size: 0.92rem;
+		width: fit-content;
+	}
+
+	.project-card a:hover {
+		text-decoration: underline;
+	}
+
+	.roadmap ol {
+		margin: 0;
+		padding-left: 1.1rem;
+		display: grid;
+		gap: 0.55rem;
+		line-height: 1.6;
+		color: var(--muted);
+	}
+
+	@keyframes rise {
+		from {
+			opacity: 0;
+			transform: translateY(12px);
+		}
+		to {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+
+	@media (max-width: 900px) {
+		.page {
+			padding-top: 3.3rem;
+		}
+
+		.about {
+			grid-template-columns: 1fr;
+		}
+
+		.grid {
+			grid-template-columns: 1fr 1fr;
+		}
+	}
+
+	@media (max-width: 640px) {
+		.hero,
+		.panel,
+		.card {
+			border-radius: 1rem;
+		}
+
+		.hero {
+			padding: 1.3rem;
+		}
+
+		.panel,
+		.card {
+			padding: 1rem;
+		}
+
+		.grid {
+			grid-template-columns: 1fr;
+		}
+
+		.project-grid {
+			grid-template-columns: 1fr;
+		}
+	}
+</style>
