@@ -3,7 +3,7 @@
 Este projeto contém meu currículo profissional desenvolvido com Astro, conteinerizado com Docker e publicado via GitHub Actions.
 
 ##  Link do Projeto
-Link: [https://seu-usuario.github.io/ds881-curriculo-GRR20245515/](https://seu-usuario.github.io/ds881-curriculo-GRR20245515/)
+ [https://seu-usuario.github.io/ds881-curriculo-GRR20245515/](https://cissamil.github.io/ds881-curriculo-GRR20245515/)
 
 ##  Como Executar Localmente (Docker)
 
@@ -19,8 +19,7 @@ O site estará disponível em `http://localhost:8080`.
 A branch `main` está configurada para:
 1. Exigir Pull Request antes do merge.
 2. Exigir que os status checks (CI/CD) passem com sucesso.
-
-!Branch Protection Screenshot
+![Proteção de Branch](./branch-protection.png)
 
 ##  Tecnologias
 - Astro
