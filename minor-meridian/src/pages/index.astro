@@ -1,13 +1,13 @@
 ---
 const profile = {
 	name: "Clarissa Morita",
-	role: "Analista e Desenvolvedora de Sistemas",
+	role: "Estagiária de TI · Desenvolvimento de Sistemas",
 	city: "Curitiba (PR)",
 	github: "https://github.com/cissamil",
 	linkedin: "https://www.linkedin.com/in/clarissa-eri-morita-3ab688238/",
 	email: "clarissamorita1@gmail.com",
 	summary:
-		"Graduanda em Tecnologia em Análise e Desenvolvimento de Sistemas (TADS) na UFPR. Experiência como jovem aprendiz em TI, com atuação em suporte e colaboração em projetos acadêmicos. Interesses em Java, desenvolvimento web (React, Node.js), bancos de dados, BI e Inteligência Artificial. Buscando oportunidade de crescimento e aprendizado contínuo em equipes ágeis.",
+		"Graduanda em Tecnologia em Análise e Desenvolvimento de Sistemas (TADS) na UFPR e estagiária de TI na APK Logística e Transporte. Desenvolvo ferramentas internas e projetos acadêmicos com C#, Java, TypeScript, React e React Native, além de bancos de dados SQL. Interesses em desenvolvimento web e mobile, mensageria, BI e Inteligência Artificial.",
 };
 
 // Education and experience (pulled from LinkedIn profile)
@@ -18,9 +18,16 @@ profile.education = {
 
 profile.experience = [
 	{
+		role: "Estagiária de TI",
+		company: "APK Logística e Transporte",
+		period: "Atual",
+		description:
+			"Desenvolvimento de ferramentas internas, suporte aos sistemas da empresa e apoio em demandas de banco de dados e relatórios.",
+	},
+	{
 		role: "Jovem Aprendiz - TI",
-		company: "APK Logística",
-		period: "—",
+		company: "APK Logística e Transporte",
+		period: "Anterior",
 		description:
 			"Atuação em suporte e atividades de TI, participação em rotinas operacionais e uso de ferramentas internas.",
 	},
@@ -28,11 +35,17 @@ profile.experience = [
 
 const skills = [
 	"Java",
-	"HTML e CSS",
+	"Spring Boot",
+	"C# / .NET",
+	"TypeScript",
 	"JavaScript",
 	"React",
+	"React Native",
+	"Angular",
+	"Flutter",
 	"Node.js",
-	"SQL e Bancos de Dados",
+	"SQL Server",
+	"RabbitMQ",
 	"Git e GitHub",
 	"Docker",
 	"CI/CD",
@@ -41,9 +54,9 @@ const skills = [
 
 const highlights = [
 	{
-		title: "Experiência prática em TI",
+		title: "Estágio em TI",
 		description:
-			"Atuação como jovem aprendiz em TI, com colaboração em demandas reais e aprendizado em ambiente profissional.",
+			"Estagiária na APK Logística e Transporte, criando ferramentas internas e resolvendo demandas reais do dia a dia da empresa.",
 	},
 	{
 		title: "Graduação em TADS na UFPR",
@@ -59,24 +72,36 @@ const highlights = [
 
 const projects = [
 	{
+		name: "Consulta RPT",
+		description:
+			"Ferramenta que mapeia quais tabelas, views e procedures do SQL Server cada relatório Crystal Reports usa, e quais relatórios dependem de cada objeto. API em C# + frontend em TypeScript.",
+		url: "https://github.com/cissamil/consulta-crystal",
+	},
+	{
+		name: "DivTADS",
+		description: "App mobile em React Native (Expo) para gestão e divisão de contas compartilhadas.",
+		url: "https://github.com/cissamil/DivTADS",
+	},
+	{
 		name: "TrabalhoDAC",
-		description: "Projeto Java academico com foco em estrutura, logica e boas praticas.",
+		description: "Sistema bancário acadêmico com frontend em Angular e backend em Java.",
 		url: "https://github.com/cissamil/TrabalhoDAC",
 	},
 	{
-		name: "ProjetoAlura",
-		description: "Projetos da Imersao Dev com JavaScript e experimentacoes de interface.",
-		url: "https://github.com/cissamil/ProjetoAlura",
+		name: "RabbitMQ + Spring Boot",
+		description: "Estudo de mensageria com Spring AMQP e RabbitMQ rodando em Docker.",
+		url: "https://github.com/cissamil/RabbitMQ",
+	},
+	{
+		name: "ABADÁ App (TCC)",
+		description:
+			"Meu TCC na UFPR, desenvolvido em equipe: app em Flutter e Firebase para gestão de turmas, eventos, acervo histórico e controle administrativo da associação ABADÁ-Capoeira.",
+		url: "https://github.com/PAFONTINHAS/abada-app",
 	},
 	{
 		name: "Projeto-Crud",
-		description: "Aplicacao CRUD em C# para consolidar fundamentos de desenvolvimento.",
+		description: "Aplicação CRUD em C# para consolidar fundamentos de desenvolvimento.",
 		url: "https://github.com/cissamil/Projeto-Crud",
-	},
-	{
-		name: "WebServidor",
-		description: "Servidor web basico com Node.js para estudo de backend e protocolos.",
-		url: "https://github.com/cissamil/WebServidor",
 	},
 ];
 
@@ -111,7 +136,7 @@ const steps = [
 						<img src={`${import.meta.env.BASE_URL}eu.jpg`} alt="Foto de Clarissa" />
 					</div>
 					<div class="hero-info">
-						<p class="tag">Disponível para oportunidades júnior e estágio</p>
+						<p class="tag">Estagiária de TI na APK Logística e Transporte</p>
 						<h1>
 							{profile.name}
 							<span>{profile.role}</span>
@@ -128,14 +153,14 @@ const steps = [
 
 			<section class="panel about" aria-label="Resumo profissional">
 				<div>
-					<h2>Resumo rápido</h2>
+					<h2>Resumo</h2>
 					<p>
-						Atualmente desenvolvendo um currículo online com foco em boas práticas de engenharia,
-						interface atrativa e deploy em GitHub Pages. Procuro contribuir em times que valorizem
-						aprendizado contínuo e colaboração.
+						Estagiária de TI na APK Logística e Transporte, onde desenvolvo ferramentas internas e apoio a área de
+						sistemas. Gosto de transformar problemas do dia a dia em soluções simples, com boas práticas
+						de engenharia, versionamento e deploy automatizado.
 					</p>
 					<h3>Formação</h3>
-					<p><strong>{profile.education.degree}</strong> — {profile.education.school}</p>
+					<p class="education"><strong>{profile.education.degree}</strong><br />{profile.education.school}</p>
 				</div>
 				<ul>
 					<li>
@@ -151,6 +176,19 @@ const steps = [
 						<span>{profile.experience[0].role} @ {profile.experience[0].company}</span>
 					</li>
 				</ul>
+			</section>
+
+			<section class="panel" aria-label="Experiência profissional">
+				<h2>Experiência</h2>
+				<div class="project-grid">
+					{profile.experience.map((job) => (
+						<article class="project-card">
+							<h3>{job.role}</h3>
+							<p><strong>{job.company}</strong> · {job.period}</p>
+							<p>{job.description}</p>
+						</article>
+					))}
+				</div>
 			</section>
 
 			<section class="panel" aria-label="Competências">
@@ -364,13 +402,16 @@ const steps = [
 	}
 
 	.about h3 {
-		margin-top: 1rem;
+		margin-top: 2rem;
+		margin-bottom: 0.6rem;
 	}
 
 	.about {
 		display: grid;
-		grid-template-columns: 1.4fr 1fr;
-		gap: 1rem;
+		grid-template-columns: 3fr 2fr;
+		column-gap: 3rem;
+		row-gap: 1.5rem;
+		align-items: start;
 	}
 
 	.about ul {
@@ -378,13 +419,16 @@ const steps = [
 		margin: 0;
 		padding: 0;
 		display: grid;
-		gap: 0.75rem;
+		gap: 1rem;
+		padding-left: 3rem;
+		border-left: 1px solid rgba(255, 255, 255, 0.08);
 	}
 
 	.about li {
 		display: grid;
-		gap: 0.2rem;
-		padding: 0.8rem;
+		gap: 0.4rem;
+		padding: 1rem 1.15rem;
+		line-height: 1.6;
 		border-radius: 0.8rem;
 		background: rgba(255, 255, 255, 0.03);
 		border: 1px solid rgba(255, 255, 255, 0.08);
@@ -502,6 +546,11 @@ const steps = [
 			grid-template-columns: 1fr;
 		}
 
+		.about ul {
+			padding-left: 0;
+			border-left: none;
+		}
+
 		.grid {
 			grid-template-columns: 1fr 1fr;
 		}
@@ -531,4 +580,26 @@ const steps = [
 			grid-template-columns: 1fr;
 		}
 	}
+	/* Textos justificados */
+	main p,
+	main li,
+	.summary {
+		text-align: justify;
+		text-justify: inter-word;
+		hyphens: none;
+		word-break: normal;
+	}
+	.about p {
+		line-height: 1.85;
+	}
+	.about li,
+	.about li span,
+	.about .education {
+		text-align: left;
+	}
+	.about .education strong {
+		display: inline-block;
+		margin-bottom: 0.25rem;
+	}
+
 </style>
