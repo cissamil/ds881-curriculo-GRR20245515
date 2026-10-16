@@ -1,116 +1,199 @@
 ---
-const profile = {
-	name: "Clarissa Morita",
-	role: "Estagiária de TI · Desenvolvimento de Sistemas",
-	city: "Curitiba (PR)",
+// ==========================================================
+// Conteúdo do site em português (pt) e inglês (en).
+// Para mudar um texto, altere aqui nos DOIS idiomas.
+// ==========================================================
+const links = {
 	github: "https://github.com/cissamil",
 	linkedin: "https://www.linkedin.com/in/clarissa-eri-morita-3ab688238/",
 	email: "clarissamorita1@gmail.com",
-	summary:
-		"Graduanda em Tecnologia em Análise e Desenvolvimento de Sistemas (TADS) na UFPR e estagiária de TI na APK Logística e Transporte. Desenvolvo ferramentas internas e projetos acadêmicos com C#, Java, TypeScript, React e React Native, além de bancos de dados SQL. Interesses em desenvolvimento web e mobile, mensageria, BI e Inteligência Artificial.",
 };
 
-// Education and experience (pulled from LinkedIn profile)
-profile.education = {
-	degree: "Graduação em Tecnologia em Análise e Desenvolvimento de Sistemas (TADS)",
-	school: "Universidade Federal do Paraná (UFPR)",
+const projectUrls = [
+	"https://github.com/cissamil/consulta-crystal",
+	"https://github.com/cissamil/DivTADS",
+	"https://github.com/cissamil/TrabalhoDAC",
+	"https://github.com/cissamil/RabbitMQ",
+	"https://github.com/PAFONTINHAS/abada-app",
+	"https://github.com/cissamil/Projeto-Crud",
+];
+
+const content = {
+	pt: {
+		pageTitle: "Clarissa | Currículo Profissional",
+		photoAlt: "Foto de Clarissa",
+		tag: "Estagiária de TI na APK Logística e Transporte",
+		role: "Estagiária de TI · Desenvolvimento de Sistemas",
+		summary:
+			"Graduanda em Tecnologia em Análise e Desenvolvimento de Sistemas (TADS) na UFPR e estagiária de TI na APK Logística e Transporte. Desenvolvo ferramentas internas e projetos acadêmicos com C#, Java, TypeScript, React e React Native, além de bancos de dados SQL. Interesses em desenvolvimento web e mobile, mensageria, BI e Inteligência Artificial.",
+		btnGithub: "Ver GitHub",
+		btnLinkedin: "LinkedIn",
+		btnContact: "Entrar em contato",
+		aboutTitle: "Resumo",
+		aboutText:
+			"Estagiária de TI na APK Logística e Transporte, onde desenvolvo ferramentas internas e apoio a área de sistemas. Gosto de transformar problemas do dia a dia em soluções simples, com boas práticas de engenharia, versionamento e deploy automatizado.",
+		educationTitle: "Formação",
+		degree: "Graduação em Tecnologia em Análise e Desenvolvimento de Sistemas (TADS)",
+		school: "Universidade Federal do Paraná (UFPR)",
+		locationLabel: "Local:",
+		location: "Curitiba (PR)",
+		techLabel: "Perfil técnico:",
+		tech: "Java · React · Node.js · Bancos de Dados · BI · Metodologias Ágeis",
+		currentLabel: "Experiência:",
+		current: "Estagiária de TI @ APK Logística e Transporte",
+		experienceTitle: "Experiência",
+		experience: [
+			{
+				role: "Estagiária de TI",
+				period: "Atual",
+				description:
+					"Desenvolvimento de ferramentas internas, suporte aos sistemas da empresa e apoio em demandas de banco de dados e relatórios.",
+			},
+			{
+				role: "Jovem Aprendiz - TI",
+				period: "Anterior",
+				description:
+					"Atuação em suporte e atividades de TI, participação em rotinas operacionais e uso de ferramentas internas.",
+			},
+		],
+		skillsTitle: "Competências",
+		skills: ["Java", "Spring Boot", "C# / .NET", "TypeScript", "JavaScript", "React", "React Native", "Angular", "Flutter", "Node.js", "SQL Server", "RabbitMQ", "Git e GitHub", "Docker", "CI/CD", "Astro"],
+		highlights: [
+			{
+				title: "Estágio em TI",
+				description:
+					"Estagiária na APK Logística e Transporte, criando ferramentas internas e resolvendo demandas reais do dia a dia da empresa.",
+			},
+			{
+				title: "Graduação em TADS na UFPR",
+				description:
+					"Base acadêmica sólida em algoritmos, engenharia de software, bancos de dados e práticas de desenvolvimento.",
+			},
+			{
+				title: "Evolução contínua",
+				description: "Aprendizado contínuo em Java, React, IA e métodos ágeis para construir produtos úteis e confiáveis.",
+			},
+		],
+		projectsTitle: "Projetos em destaque",
+		repoLink: "Ver repositório",
+		projects: [
+			{
+				name: "Consulta RPT",
+				description:
+					"Ferramenta que mapeia quais tabelas, views e procedures do SQL Server cada relatório Crystal Reports usa, e quais relatórios dependem de cada objeto. API em C# + frontend em TypeScript.",
+			},
+			{ name: "DivTADS", description: "App mobile em React Native (Expo) para gestão e divisão de contas compartilhadas." },
+			{ name: "TrabalhoDAC", description: "Sistema bancário acadêmico com frontend em Angular e backend em Java." },
+			{ name: "RabbitMQ + Spring Boot", description: "Estudo de mensageria com Spring AMQP e RabbitMQ rodando em Docker." },
+			{
+				name: "ABADÁ App (TCC)",
+				description:
+					"Meu TCC na UFPR, desenvolvido em equipe: app em Flutter e Firebase para gestão de turmas, eventos, acervo histórico e controle administrativo da associação ABADÁ-Capoeira.",
+			},
+			{ name: "Projeto-Crud", description: "Aplicação CRUD em C# para consolidar fundamentos de desenvolvimento." },
+		],
+		stepsTitle: "Como eu trabalho",
+		steps: [
+			"Mapear o problema e o objetivo da entrega",
+			"Construir uma solução limpa e escalável",
+			"Validar com build, testes e revisão",
+			"Publicar com documentação clara",
+		],
+	},
+	en: {
+		pageTitle: "Clarissa | Professional Resume",
+		photoAlt: "Photo of Clarissa",
+		tag: "IT Intern at APK Logística e Transporte",
+		role: "IT Intern · Systems Development",
+		summary:
+			"Undergraduate student in Systems Analysis and Development (TADS) at UFPR and IT intern at APK Logística e Transporte. I build internal tools and academic projects with C#, Java, TypeScript, React and React Native, as well as SQL databases. Interested in web and mobile development, messaging, BI and Artificial Intelligence.",
+		btnGithub: "View GitHub",
+		btnLinkedin: "LinkedIn",
+		btnContact: "Get in touch",
+		aboutTitle: "Summary",
+		aboutText:
+			"IT intern at APK Logística e Transporte, where I build internal tools and support the systems team. I enjoy turning everyday problems into simple solutions, applying good engineering practices, version control and automated deployment.",
+		educationTitle: "Education",
+		degree: "Technology Degree in Systems Analysis and Development (TADS)",
+		school: "Federal University of Paraná (UFPR)",
+		locationLabel: "Location:",
+		location: "Curitiba, Brazil",
+		techLabel: "Tech profile:",
+		tech: "Java · React · Node.js · Databases · BI · Agile Methodologies",
+		currentLabel: "Experience:",
+		current: "IT Intern @ APK Logística e Transporte",
+		experienceTitle: "Experience",
+		experience: [
+			{
+				role: "IT Intern",
+				period: "Current",
+				description:
+					"Development of internal tools, support for the company's systems and help with database and reporting tasks.",
+			},
+			{
+				role: "IT Young Apprentice",
+				period: "Previous",
+				description: "IT support and related activities, taking part in operational routines and using internal tools.",
+			},
+		],
+		skillsTitle: "Skills",
+		skills: ["Java", "Spring Boot", "C# / .NET", "TypeScript", "JavaScript", "React", "React Native", "Angular", "Flutter", "Node.js", "SQL Server", "RabbitMQ", "Git & GitHub", "Docker", "CI/CD", "Astro"],
+		highlights: [
+			{
+				title: "IT Internship",
+				description:
+					"Intern at APK Logística e Transporte, building internal tools and solving real, day-to-day business needs.",
+			},
+			{
+				title: "TADS Degree at UFPR",
+				description: "Solid academic foundation in algorithms, software engineering, databases and development practices.",
+			},
+			{
+				title: "Continuous Growth",
+				description: "Constantly learning Java, React, AI and agile methods to build useful and reliable products.",
+			},
+		],
+		projectsTitle: "Featured projects",
+		repoLink: "View repository",
+		projects: [
+			{
+				name: "Consulta RPT",
+				description:
+					"Tool that maps which SQL Server tables, views and procedures each Crystal Reports report uses, and which reports depend on each object. C# API + TypeScript frontend.",
+			},
+			{ name: "DivTADS", description: "React Native (Expo) mobile app for managing and splitting shared expenses." },
+			{ name: "TrabalhoDAC", description: "Academic banking system with an Angular frontend and a Java backend." },
+			{ name: "RabbitMQ + Spring Boot", description: "Messaging study with Spring AMQP and RabbitMQ running on Docker." },
+			{
+				name: "ABADÁ App (Final Project)",
+				description:
+					"My undergraduate final project at UFPR, built as a team: a Flutter and Firebase app to manage classes, events, historical archives and administration for the ABADÁ-Capoeira association.",
+			},
+			{ name: "Projeto-Crud", description: "CRUD application in C# to strengthen development fundamentals." },
+		],
+		stepsTitle: "How I work",
+		steps: [
+			"Map the problem and the delivery goal",
+			"Build a clean, scalable solution",
+			"Validate with build, tests and review",
+			"Publish with clear documentation",
+		],
+	},
 };
 
-profile.experience = [
-	{
-		role: "Estagiária de TI",
-		company: "APK Logística e Transporte",
-		period: "Atual",
-		description:
-			"Desenvolvimento de ferramentas internas, suporte aos sistemas da empresa e apoio em demandas de banco de dados e relatórios.",
-	},
-	{
-		role: "Jovem Aprendiz - TI",
-		company: "APK Logística e Transporte",
-		period: "Anterior",
-		description:
-			"Atuação em suporte e atividades de TI, participação em rotinas operacionais e uso de ferramentas internas.",
-	},
-];
+// Transforma o objeto em chaves "planas", ex.: "projects.0.name"
+function flatten(obj, prefix = "", out = {}) {
+	for (const [key, value] of Object.entries(obj)) {
+		const path = prefix ? `${prefix}.${key}` : key;
+		if (value && typeof value === "object") flatten(value, path, out);
+		else out[path] = value;
+	}
+	return out;
+}
 
-const skills = [
-	"Java",
-	"Spring Boot",
-	"C# / .NET",
-	"TypeScript",
-	"JavaScript",
-	"React",
-	"React Native",
-	"Angular",
-	"Flutter",
-	"Node.js",
-	"SQL Server",
-	"RabbitMQ",
-	"Git e GitHub",
-	"Docker",
-	"CI/CD",
-	"Astro",
-];
-
-const highlights = [
-	{
-		title: "Estágio em TI",
-		description:
-			"Estagiária na APK Logística e Transporte, criando ferramentas internas e resolvendo demandas reais do dia a dia da empresa.",
-	},
-	{
-		title: "Graduação em TADS na UFPR",
-		description:
-			"Base acadêmica sólida em algoritmos, engenharia de software, bancos de dados e práticas de desenvolvimento.",
-	},
-	{
-		title: "Evolução contínua",
-		description:
-			"Aprendizado contínuo em Java, React, IA e métodos ágeis para construir produtos úteis e confiáveis.",
-	},
-];
-
-const projects = [
-	{
-		name: "Consulta RPT",
-		description:
-			"Ferramenta que mapeia quais tabelas, views e procedures do SQL Server cada relatório Crystal Reports usa, e quais relatórios dependem de cada objeto. API em C# + frontend em TypeScript.",
-		url: "https://github.com/cissamil/consulta-crystal",
-	},
-	{
-		name: "DivTADS",
-		description: "App mobile em React Native (Expo) para gestão e divisão de contas compartilhadas.",
-		url: "https://github.com/cissamil/DivTADS",
-	},
-	{
-		name: "TrabalhoDAC",
-		description: "Sistema bancário acadêmico com frontend em Angular e backend em Java.",
-		url: "https://github.com/cissamil/TrabalhoDAC",
-	},
-	{
-		name: "RabbitMQ + Spring Boot",
-		description: "Estudo de mensageria com Spring AMQP e RabbitMQ rodando em Docker.",
-		url: "https://github.com/cissamil/RabbitMQ",
-	},
-	{
-		name: "ABADÁ App (TCC)",
-		description:
-			"Meu TCC na UFPR, desenvolvido em equipe: app em Flutter e Firebase para gestão de turmas, eventos, acervo histórico e controle administrativo da associação ABADÁ-Capoeira.",
-		url: "https://github.com/PAFONTINHAS/abada-app",
-	},
-	{
-		name: "Projeto-Crud",
-		description: "Aplicação CRUD em C# para consolidar fundamentos de desenvolvimento.",
-		url: "https://github.com/cissamil/Projeto-Crud",
-	},
-];
-
-const steps = [
-	"Mapear problema e objetivo da entrega",
-	"Construir solucao limpa e escalavel",
-	"Validar com build, testes e revisao",
-	"Publicar com documentacao clara",
-];
+const translations = { pt: flatten(content.pt), en: flatten(content.en) };
+const pt = content.pt; // o HTML é gerado em português; o script troca para inglês
+const company = "APK Logística e Transporte";
 ---
 
 <html lang="pt-BR">
@@ -122,111 +205,152 @@ const steps = [
 		<meta name="generator" content={Astro.generator} />
 		<meta
 			name="description"
-			content="Curriculo e portifolio profissional de Clarissa. Desenvolvimento web moderno, com foco em qualidade, design e entrega continua."
+			content="Currículo e portfólio profissional de Clarissa Morita. Desenvolvimento de sistemas, web e mobile."
 		/>
-		<title> Clarissa | Currículo Profissional</title>
+		<title>{pt.pageTitle}</title>
 	</head>
 	<body>
 		<div class="background-glow" aria-hidden="true"></div>
 		<main class="page">
+			<div class="lang-switch" role="group" aria-label="Idioma / Language">
+				<button type="button" data-set-lang="pt" aria-pressed="true">PT</button>
+				<button type="button" data-set-lang="en" aria-pressed="false">EN</button>
+			</div>
+
 			<header class="hero">
 				<div class="hero-grid">
 					<div class="hero-photo">
-						<!-- Place your photo at minor-meridian/public/eu.jpg -->
-						<img src={`${import.meta.env.BASE_URL}eu.jpg`} alt="Foto de Clarissa" />
+						<img src={`${import.meta.env.BASE_URL}eu.jpg`} alt={pt.photoAlt} data-i18n-alt="photoAlt" />
 					</div>
 					<div class="hero-info">
-						<p class="tag">Estagiária de TI na APK Logística e Transporte</p>
+						<p class="tag" data-i18n="tag">{pt.tag}</p>
 						<h1>
-							{profile.name}
-							<span>{profile.role}</span>
+							Clarissa Morita
+							<span data-i18n="role">{pt.role}</span>
 						</h1>
-						<p class="summary">{profile.summary}</p>
+						<p class="summary" data-i18n="summary">{pt.summary}</p>
 						<div class="cta-group">
-							<a class="btn primary" href={profile.github} target="_blank" rel="noreferrer">Ver GitHub</a>
-							<a class="btn ghost" href={profile.linkedin} target="_blank" rel="noreferrer">LinkedIn</a>
-							<a class="btn ghost" href={`mailto:${profile.email}`}>Entrar em contato</a>
+							<a class="btn primary" href={links.github} target="_blank" rel="noreferrer" data-i18n="btnGithub">{pt.btnGithub}</a>
+							<a class="btn ghost" href={links.linkedin} target="_blank" rel="noreferrer" data-i18n="btnLinkedin">{pt.btnLinkedin}</a>
+							<a class="btn ghost" href={`mailto:${links.email}`} data-i18n="btnContact">{pt.btnContact}</a>
 						</div>
 					</div>
 				</div>
 			</header>
 
-			<section class="panel about" aria-label="Resumo profissional">
+			<section class="panel about">
 				<div>
-					<h2>Resumo</h2>
-					<p>
-						Estagiária de TI na APK Logística e Transporte, onde desenvolvo ferramentas internas e apoio a área de
-						sistemas. Gosto de transformar problemas do dia a dia em soluções simples, com boas práticas
-						de engenharia, versionamento e deploy automatizado.
+					<h2 data-i18n="aboutTitle">{pt.aboutTitle}</h2>
+					<p data-i18n="aboutText">{pt.aboutText}</p>
+					<h3 data-i18n="educationTitle">{pt.educationTitle}</h3>
+					<p class="education">
+						<strong data-i18n="degree">{pt.degree}</strong><br />
+						<span data-i18n="school">{pt.school}</span>
 					</p>
-					<h3>Formação</h3>
-					<p class="education"><strong>{profile.education.degree}</strong><br />{profile.education.school}</p>
 				</div>
 				<ul>
 					<li>
-						<strong>Local:</strong>
-						<span>{profile.city}</span>
+						<strong data-i18n="locationLabel">{pt.locationLabel}</strong>
+						<span data-i18n="location">{pt.location}</span>
 					</li>
 					<li>
-						<strong>Perfil técnico:</strong>
-						<span>Java · React · Node.js · Bancos de Dados · BI · Metodologias Ágeis</span>
+						<strong data-i18n="techLabel">{pt.techLabel}</strong>
+						<span data-i18n="tech">{pt.tech}</span>
 					</li>
 					<li>
-						<strong>Experiência:</strong>
-						<span>{profile.experience[0].role} @ {profile.experience[0].company}</span>
+						<strong data-i18n="currentLabel">{pt.currentLabel}</strong>
+						<span data-i18n="current">{pt.current}</span>
 					</li>
 				</ul>
 			</section>
 
-			<section class="panel" aria-label="Experiência profissional">
-				<h2>Experiência</h2>
+			<section class="panel">
+				<h2 data-i18n="experienceTitle">{pt.experienceTitle}</h2>
 				<div class="project-grid">
-					{profile.experience.map((job) => (
+					{pt.experience.map((job, i) => (
 						<article class="project-card">
-							<h3>{job.role}</h3>
-							<p><strong>{job.company}</strong> · {job.period}</p>
-							<p>{job.description}</p>
+							<h3 data-i18n={`experience.${i}.role`}>{job.role}</h3>
+							<p><strong>{company}</strong> · <span data-i18n={`experience.${i}.period`}>{job.period}</span></p>
+							<p data-i18n={`experience.${i}.description`}>{job.description}</p>
 						</article>
 					))}
 				</div>
 			</section>
 
-			<section class="panel" aria-label="Competências">
-				<h2>Competências</h2>
+			<section class="panel">
+				<h2 data-i18n="skillsTitle">{pt.skillsTitle}</h2>
 				<div class="skills">
-					{skills.map((skill) => <span class="chip">{skill}</span>)}
+					{pt.skills.map((skill, i) => <span class="chip" data-i18n={`skills.${i}`}>{skill}</span>)}
 				</div>
 			</section>
 
-			<section class="grid" aria-label="Destaques profissionais">
-				{highlights.map((item) => (
+			<section class="grid">
+				{pt.highlights.map((item, i) => (
 					<article class="card">
-						<h3>{item.title}</h3>
-						<p>{item.description}</p>
+						<h3 data-i18n={`highlights.${i}.title`}>{item.title}</h3>
+						<p data-i18n={`highlights.${i}.description`}>{item.description}</p>
 					</article>
 				))}
 			</section>
 
-			<section class="panel" aria-label="Projetos em destaque">
-				<h2>Projetos em destaque</h2>
+			<section class="panel">
+				<h2 data-i18n="projectsTitle">{pt.projectsTitle}</h2>
 				<div class="project-grid">
-					{projects.map((project) => (
+					{pt.projects.map((project, i) => (
 						<article class="project-card">
-							<h3>{project.name}</h3>
-							<p>{project.description}</p>
-							<a href={project.url} target="_blank" rel="noreferrer">Ver repositório</a>
+							<h3 data-i18n={`projects.${i}.name`}>{project.name}</h3>
+							<p data-i18n={`projects.${i}.description`}>{project.description}</p>
+							<a href={projectUrls[i]} target="_blank" rel="noreferrer" data-i18n="repoLink">{pt.repoLink}</a>
 						</article>
 					))}
 				</div>
 			</section>
 
-			<section class="panel roadmap" aria-label="Forma de trabalho">
-				<h2>Como eu trabalho</h2>
+			<section class="panel roadmap">
+				<h2 data-i18n="stepsTitle">{pt.stepsTitle}</h2>
 				<ol>
-					{steps.map((step) => <li>{step}</li>)}
+					{pt.steps.map((step, i) => <li data-i18n={`steps.${i}`}>{step}</li>)}
 				</ol>
 			</section>
 		</main>
+
+		<script type="application/json" id="i18n-data" set:html={JSON.stringify(translations)}></script>
+		<script is:inline>
+			(function () {
+				var data = JSON.parse(document.getElementById("i18n-data").textContent);
+
+				function setLang(lang) {
+					if (!data[lang]) lang = "pt";
+					var dict = data[lang];
+					document.querySelectorAll("[data-i18n]").forEach(function (el) {
+						var text = dict[el.getAttribute("data-i18n")];
+						if (text !== undefined) el.textContent = text;
+					});
+					document.querySelectorAll("[data-i18n-alt]").forEach(function (el) {
+						var text = dict[el.getAttribute("data-i18n-alt")];
+						if (text !== undefined) el.setAttribute("alt", text);
+					});
+					document.documentElement.lang = lang === "en" ? "en" : "pt-BR";
+					document.title = dict.pageTitle;
+					document.querySelectorAll("[data-set-lang]").forEach(function (btn) {
+						btn.setAttribute("aria-pressed", String(btn.getAttribute("data-set-lang") === lang));
+					});
+					try { localStorage.setItem("lang", lang); } catch (e) {}
+				}
+
+				// Prioridade: ?lang=en no link > escolha salva > português
+				var fromUrl = new URLSearchParams(location.search).get("lang");
+				var saved = null;
+				try { saved = localStorage.getItem("lang"); } catch (e) {}
+				setLang(fromUrl || saved || "pt");
+
+				document.querySelectorAll("[data-set-lang]").forEach(function (btn) {
+					btn.addEventListener("click", function () {
+						setLang(btn.getAttribute("data-set-lang"));
+					});
+				});
+			})();
+		</script>
 	</body>
 </html>
 
@@ -600,6 +724,38 @@ const steps = [
 	.about .education strong {
 		display: inline-block;
 		margin-bottom: 0.25rem;
+	}
+
+	/* Seletor de idioma */
+	.lang-switch {
+		display: flex;
+		justify-content: flex-end;
+		gap: 0.4rem;
+		margin-bottom: 0.9rem;
+	}
+
+	.lang-switch button {
+		font: inherit;
+		font-size: 0.82rem;
+		font-weight: 600;
+		padding: 0.4rem 0.85rem;
+		border-radius: 999px;
+		border: 1px solid var(--line);
+		background: transparent;
+		color: var(--muted);
+		cursor: pointer;
+		transition: background 0.2s ease, color 0.2s ease;
+	}
+
+	.lang-switch button:hover {
+		color: var(--text);
+		border-color: var(--accent);
+	}
+
+	.lang-switch button[aria-pressed="true"] {
+		background: linear-gradient(90deg, var(--accent), #72f0d8);
+		color: #082b26;
+		border-color: transparent;
 	}
 
 </style>
